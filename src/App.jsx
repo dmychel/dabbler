@@ -10,7 +10,7 @@ function App() {
   });
 
   return (
-    <div className="App">
+    <div className="app">
       <animated.div
         {...bindDivPos()}
         style={{
@@ -18,8 +18,23 @@ function App() {
           y: divPos.y,
           x: divPos.x,
         }}
+        className="main_tab"
       >
-        <h1>hello world</h1>
+        <div className="title">
+          <h1>hello world</h1>
+          <div className="sub_title">
+            <span>Artist, Web Developer, and Dabbler</span>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li>about</li>
+            <li>web dev</li>
+            <li>photography</li>
+            <li>links</li>
+            <li>contact</li>
+          </ul>
+        </nav>
       </animated.div>
     </div>
   );
