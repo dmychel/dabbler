@@ -16,6 +16,14 @@ function App() {
     setTabArr([...tabArr, type]);
   }
 
+  function exitTab(type) {
+    const index = tabArr.indexOf(type);
+    let newArr = tabArr;
+    newArr.splice(index, 1);
+    console.log(newArr);
+    return setTabArr([...newArr]);
+  }
+
   return (
     <div className="app">
       {tabArr.map((tab, index) => {
@@ -24,6 +32,7 @@ function App() {
           <TabName
             key={index}
             openTab={openTab}
+            exitTab={exitTab}
             AboutTab={AboutTab}
             ContactTab={ContactTab}
             WebDevTab={WebDevTab}
