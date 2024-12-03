@@ -19,6 +19,7 @@
 .about_tab,
 .contact_tab,
 .webDev_tab {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
