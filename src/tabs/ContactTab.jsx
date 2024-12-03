@@ -2,7 +2,9 @@
 import { useDrag } from "@use-gesture/react";
 import { useSpring, animated } from "@react-spring/web";
 
-export default function Contact() {
+import PropTypes from "prop-types";
+
+export default function ContactTab({ exitTab }) {
   const divPos = useSpring({ x: 0, y: 0 });
   const bindDivPos = useDrag((params) => {
     divPos.x.set(params.offset[0]);
@@ -18,7 +20,14 @@ export default function Contact() {
       }}
       className="about_tab"
     >
+      <div className="tab_nav">
+        <span onClick={() => exitTab(ContactTab)}>&#10006;</span>
+      </div>
       Contact
     </animated.div>
   );
 }
+
+ContactTab.propTypes = {
+  exitTab: PropTypes.func,
+};
