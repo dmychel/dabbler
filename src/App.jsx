@@ -20,7 +20,15 @@ function App() {
     <div className="app">
       {tabArr.map((tab, index) => {
         const TabName = tab;
-        return <TabName key={index} openTab={openTab} AboutTab={AboutTab} />;
+        return (
+          <TabName
+            key={index}
+            openTab={openTab}
+            AboutTab={AboutTab}
+            ContactTab={ContactTab}
+            WebDevTab={WebDevTab}
+          />
+        );
       })}
     </div>
   );
